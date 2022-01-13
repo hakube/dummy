@@ -1,0 +1,11 @@
+# Deploy to digitalocean
+
+name: Build and deploy
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Test image
+        run: docker-compose -f production.yml up -d --build
