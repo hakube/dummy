@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy Image
-        uses: easingthemes/ssh-deploy@v2.1.4
+        uses: easingthemes/ssh-deploy@v2.2.11
         env:
           ARGS: "-chavzP --stats"
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
