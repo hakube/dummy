@@ -10,7 +10,7 @@ jobs:
       - name: Deploy Image
         uses: easingthemes/ssh-deploy@v2.1.4
         env:
-          ARGS: "-rltgoDzvO"
+          ARGS: "-chavzP --stats"
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
           REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
           REMOTE_USER: ${{ secrets.DEPLOY_USERNAME }}
