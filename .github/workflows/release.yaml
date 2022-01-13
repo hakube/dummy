@@ -14,5 +14,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
           REMOTE_USER: ${{ secrets.DEPLOY_USERNAME }}
           REMOTE_PORT: ${{ secrets.DEPLOY_PORT }}
-          SOURCE: "dist/"
+          SOURCE: "{{ github.repository }}"
           TARGET: ${{ secrets.DEPLOY_TARGET }}
